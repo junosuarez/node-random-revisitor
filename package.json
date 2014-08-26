@@ -1,0 +1,17 @@
+{
+  "name": "random-revisitor",
+  "author": "jden <jason@denizac.org>",
+  "version": "0.1.0",
+  "description": "get a random revisit service",
+  "keywords": ["revisit.link", "revisit"],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "git@github.com:jden/node-random-revisitor.git",
+  "license": "ISC",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mochi": "0.1.0"
+  }
+}
