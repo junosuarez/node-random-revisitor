@@ -1,7 +1,7 @@
 {
   "name": "random-revisitor",
   "author": "jden <jason@denizac.org>",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "get a random revisit service",
   "keywords": [
     "revisit.link",
