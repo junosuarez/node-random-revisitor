@@ -7,7 +7,12 @@ $ npm i -g random-revisitor
 
 $ random-revisitor
 http://glitch.nothingissacred.org/glitchclamp
+
+# Also supports filtering by type
+$ random-revisitor gif
+http://glitch.nothingissacred.org/redblueshift
 ```
+
 
 programmatic usage:
 ```js
@@ -15,13 +20,23 @@ var randomRevisitor = require('random-revisitor')
 
 randomRevisitor(function (err, random) {
   if (err) { console.error(":'("); process.exit(1) }
-  console.log('there is a service at %s", random)
+  console.log('there is a service at %s', random)
 })
+
+// also filter by type
+randomRevisitor('gif', function (err, random) {
+  if (err) { console.error(":'("); process.exit(1) }
+  console.log('there is a gif service at %s', random)
+})
+
 ```
 
 ## api
 ###`randomRevisitor : (Function<Error, serviceUrl:String>) => void`
-return a random url from a service on hub.revisit.link
+return a random url from a service on hub.revisit.link that is online.
+
+###`randomRevisitor : (type, Function<Error, serviceUrl:String>) => void`
+return a random url from a service on hub.revisit.link that supports `type` and is online.
 
 ## installation
 
@@ -30,13 +45,14 @@ return a random url from a service on hub.revisit.link
 
 ## running the tests
 
-lol
-
+```shell
+$ npm test
+```
 
 ## contributors
 
 - jden <jason@denizac.org>
-
+- flet [@flettre](http://twitter.com/flettre)
 
 ## license
 
